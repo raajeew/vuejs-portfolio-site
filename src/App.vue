@@ -1,7 +1,9 @@
 <template>
   <HeaderView />
 
-  <router-view></router-view>
+  <div class="page-body">
+    <router-view></router-view>
+  </div>
   
 </template>
 
@@ -21,10 +23,13 @@ body{
   margin: 0;
   padding: 0;
 }
+.page-body{
+  box-sizing: border-box;
+  padding: 0 20px;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5rem;
   color: #2c3e50;
 }
 

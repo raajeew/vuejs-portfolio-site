@@ -1,4 +1,5 @@
 <template>
+    <p v-if="loading">Loading...</p>
     <div>
         <ul>
             <li :key="exp.id" v-for="exp in experience">
@@ -18,15 +19,17 @@
         },
         data(){
             return{
-                experience: []
+                experience: [],
+                loading: true
             }
         },
         async created(){
             try{
                 const response = await axios.get(`/myAppService/getMyExperience.php`);
                 this.experience = response.data.items;
-                console.log(this.experience);
+                this.loading = false
             }catch (error) {
+            this.loading = false;
             console.log(error);
            }
         }

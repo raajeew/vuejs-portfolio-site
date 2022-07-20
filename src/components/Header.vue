@@ -26,8 +26,11 @@
         display: flex;
         height: 50px;
         border-bottom: 1px solid #ccc;
+        box-sizing: border-box;
+        padding: 0 20px;
     }
     .logo{
+        font-size: 1.6rem;
         width: 200px;
         display: flex;
         align-items: center;

@@ -1,4 +1,5 @@
 <template>
+    <p v-if="loading">Loading...</p>
     <div>
         <ul>
             <li v-for="skill in skills" :key="skill.id">
@@ -14,14 +15,17 @@
         name: "SkillsView",
         data(){
             return{
-                skills:[]
+                skills:[],
+                loading: true
             }
         },
         async created(){
             try{
                 const response = await axios.get(`/myAppService/getMyTechSkills.php`);
-            this.skills = response.data.items;
+                this.skills = response.data.items;
+                this.loading = false;
             }catch(error){
+                this.loading = false;
                 console.log(error)
             }
         }

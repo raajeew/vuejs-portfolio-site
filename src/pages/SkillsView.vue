@@ -1,5 +1,5 @@
 <template>
-    <h1>Skills</h1>
+    <h1>My Technical Skills</h1>
     <SkillsView />
 </template>
 

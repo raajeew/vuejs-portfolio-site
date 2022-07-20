@@ -1,5 +1,5 @@
 <template>
-    <h1>Portfolio</h1>
+    <h1>My Work Portfolio</h1>
     <Portfolio />
 </template>
 
