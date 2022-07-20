@@ -1,9 +1,10 @@
 <template>
-    <p v-if="loading">Loading...</p>
+    <p v-if="loading" class="loading"></p>
     <div>
-        <ul>
+        <ul class="skills">
             <li v-for="skill in skills" :key="skill.id">
                 <p>{{skill.skill}} ({{skill.rating}})</p>
+                <p>Experiece: {{skill.yoe}} yrs</p>
             </li>
         </ul>
     </div>
@@ -31,3 +32,18 @@
         }
     }
 </script>
+<style scoped>
+.skills{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills > li{
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #efefef;
+    width: 20%;
+}
+</style>

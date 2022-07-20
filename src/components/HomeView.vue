@@ -1,5 +1,5 @@
 <template>
-    <p v-if="loading">Loading...</p>
+    <p v-if="loading" class="loading"></p>
     <p v-html="summary.description"></p>
     
 </template>

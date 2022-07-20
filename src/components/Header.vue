@@ -2,13 +2,14 @@
     <header>
         <div class="logo">Rajeev Ranjan</div>
         <div class="main-navigation">
-            <ul>
+            <ul class="main-nav">
                 <li><router-link to="/">About</router-link></li>
                 <li><router-link to="/skills">Skills</router-link></li>
                 <li>
                     <router-link to="/experience">Work Experience</router-link>
                 </li>
                 <li><router-link to="/portfolio">Portfolio</router-link></li>
+                <li><router-link to="/resume">Resume</router-link></li>
                 <li><router-link to="/contact">Contact</router-link></li>
             </ul>
         </div>
@@ -34,6 +35,10 @@
         width: 200px;
         display: flex;
         align-items: center;
+    }
+    .main-nav a{
+        text-decoration: none;
+        color: #0475a9;
     }
     ul, li{
         list-style: none;

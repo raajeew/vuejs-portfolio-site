@@ -32,5 +32,21 @@ body{
   line-height: 1.5rem;
   color: #2c3e50;
 }
-
+.loading{
+  background: url('./assets/loading.gif') no-repeat;
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 50px);
+  z-index: 999;
+}
+a{
+    text-decoration: none;
+    color: #0475a9;
+}
+p{
+  margin: 0;
+  padding: 0 0 5px;
+}
 </style>

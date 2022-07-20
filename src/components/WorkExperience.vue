@@ -1,9 +1,9 @@
 <template>
-    <p v-if="loading">Loading...</p>
+    <p v-if="loading" class="loading"></p>
     <div>
-        <ul>
+        <ul class="experience">
             <li :key="exp.id" v-for="exp in experience">
-                <WorkWidgetVue :work="exp" />
+                <WorkWidgetVue v-bind:work="exp" />
             </li>
         </ul>
     </div>
@@ -35,3 +35,16 @@
         }
     }
 </script>
+
+<style scoped>
+    .experience{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .experience > li{
+        border-bottom: 1px solid #d7d5d5;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+</style>

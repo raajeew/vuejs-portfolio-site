@@ -1,6 +1,6 @@
 <template>
     <article>
-        <header>{{work.company}}</header>
+        <header>{{work.company}} <span>({{work.startdate}} - {{work.enddate}})</span></header>
         <p>{{work.designation}}</p>
         <p>{{work.summary}}</p>
     </article>
@@ -13,3 +13,12 @@ export default{
     }
 }
 </script>
+
+<style scoped>
+header{
+    font-weight: bold;
+}
+header span{
+    font-weight: normal;
+}
+</style>

@@ -1,11 +1,11 @@
 <template>
-    <p v-if="loading">Loading...</p>
+    <p v-if="loading" class="loading"></p>
     <div>
         <ul>
             <li v-for="portfolio in portfolios" :key="portfolio.id">
                 <p class="title">{{portfolio.name}}</p>
                 <p>{{portfolio.desc}}</p>
-                <p><a v-bind:href="portfolio.url">Demo</a></p>
+                <p><a v-bind:href="portfolio.url" target="_blank">Demo</a></p>
             </li>
         </ul>
     </div>

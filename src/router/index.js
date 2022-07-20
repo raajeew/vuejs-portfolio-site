@@ -4,6 +4,7 @@ import ExperienceView from '../pages/ExperienceView';
 import SkillsView from '../pages/SkillsView';
 import PortfolioView from '../pages/PortfolioView'
 import ContactView from '../pages/ContactView'
+import ResumeView from '../pages/ResumeView.vue'
 
 const routes = [
     {
@@ -25,6 +26,11 @@ const routes = [
         path: '/portfolio',
         name: 'Portfolio',
         component: PortfolioView
+    },
+    {
+        path: '/resume',
+        name: 'Resume',
+        component: ResumeView
     },
     {
         path: '/contact',
