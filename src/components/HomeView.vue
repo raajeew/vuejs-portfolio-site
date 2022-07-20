@@ -15,7 +15,7 @@ export default {
     return {
         results: [],
         summary: [],
-        loading: false
+        loading: true
     }
   },
   async created(){
@@ -23,7 +23,9 @@ export default {
             const res = await axios.get(`/myAppService/getMySummary.php`);
             console.log("res",res.data.items);
             this.summary = res.data.items[0];
+            this.loading = false;
         } catch (error) {
+            this.loading = false;
             console.log(error);
         }
     },
